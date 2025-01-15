@@ -9,9 +9,23 @@ function Navbar() {
             <Plant size={30} color="#3b8c3c" weight="duotone" alt="Home" />
             <span className="text-xl font-bold ml-2">Blog Pessoal</span>
           </a>
-          <div className="flex gap-4">
-            Postagens Temas Cadastrar tema Perfil Sair
-          </div>
+          <nav className="flex items-center gap-4 ml-8">
+            <a href="index.html" className="hover:underline">
+              Postagens
+            </a>
+            <a href="index.html" className="hover:underline">
+              Temas
+            </a>
+            <a href="index.html" className="hover:underline">
+              Cadastrar tema
+            </a>
+            <a href="index.html" className="hover:underline">
+              Perfil
+            </a>
+            <a href="index.html" className="hover:underline">
+              Sair
+            </a>
+          </nav>
         </div>
       </div>
     </>
