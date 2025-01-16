@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <>
-      <div className="flex justify-center bg-green-palette-300 text-eme">
+      <div className="flex justify-center bg-green-palette-300 text-eme ">
         <div className="container flex flex-col items-center py-4">
           <p className="text-xl font-bold">
             Catharina Zagiacomo | Copyright {data}
