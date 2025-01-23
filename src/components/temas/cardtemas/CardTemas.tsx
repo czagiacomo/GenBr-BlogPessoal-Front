@@ -7,30 +7,31 @@ interface CardTemasProps {
 
 function CardTemas({ tema }: CardTemasProps) {
   return (
-    <div className="border flex flex-col rounded-2xl overflow-hidden justify-between">
-      <header className="py-2 px-6 bg-indigo-800 text-white font-bold text-2xl">
-        Tema
-      </header>
-      <p className="p-8 text-3xl bg-slate-200 h-full">{tema.descricao}</p>
-
-      <div className="flex">
-        <Link
-          to={`/editartema/${tema.id}`}
-          className="w-full text-slate-100 bg-	indigo-400 hover:bg-indigo-800 
-    flex items-center justify-center py-2"
-        >
-          <button>Editar</button>
-        </Link>
-
-        <Link
-          to={`/deletartema/${tema.id}`}
-          className="text-slate-100 bg-red-400 hover:bg-red-700 w-full 
-		flex items-center justify-center"
-        >
-          <button>Deletar</button>
-        </Link>
+    <>
+      <div>
+        <div className="card bg-neutral text-neutral-content w-96 m-5">
+          <div className="card-body text-center">
+            <h2 className="card-title justify-center mb-4">Tema</h2>
+            <p>{tema.descricao}</p>
+            <div className="card-actions grid grid-flow-col justify-stretch items-end pt-6
+            ">
+              <Link
+                to={`/editartema/${tema.id}`}
+                className="btn btn-ghost text-slate-100 bg-info hover:bg-indigo-800 "
+              >
+                <button>Editar</button>
+              </Link>
+              <Link
+                to={`/deletartema/${tema.id}`}
+                className=" btn btn-ghost text-slate-100 bg-error hover:bg-red-700"
+              >
+                <button>Deletar</button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -89,42 +89,47 @@ function FormTema() {
   }
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-4xl text-center my-8">
-        {id === undefined ? "Cadastrar Tema" : "Editar Tema"}
-      </h1>
+    <>
+      <div className="bg-base-200 min-h-screen">
+        <div className="container flex flex-col items-center justify-center mx-auto ">
+          <h1 className="text-4xl text-center my-8 ">
+            {id === undefined ? "Cadastrar Tema" : "Editar Tema"}
+          </h1>
 
-      <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="descricao">Descrição do Tema</label>
-          <input
-            type="text"
-            placeholder="Descreva aqui seu tema"
-            name="descricao"
-            className="border-2 border-slate-700 rounded p-2"
-            value={tema.descricao}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-          />
+          <form className="w-1/2 flex flex-col gap-4 " onSubmit={gerarNovoTema}>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="descricao">Descrição do Tema</label>
+
+              <input
+                type="text"
+                placeholder="Descreva aqui seu tema"
+                className="input input-bordered input-secondary"
+                value={tema.descricao}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  atualizarEstado(e)
+                }
+              />
+            </div>
+            <button
+              className="btn btn-secondary w-1/2 py-2 mx-auto flex justify-center"
+              type="submit"
+            >
+              {isLoading ? (
+                <RotatingLines
+                  strokeColor="white"
+                  strokeWidth="5"
+                  animationDuration="0.75"
+                  width="24"
+                  visible={true}
+                />
+              ) : (
+                <span>{id === undefined ? "Cadastrar" : "Atualizar"}</span>
+              )}
+            </button>
+          </form>
         </div>
-        <button
-          className="rounded text-slate-100 bg-indigo-400 
-                               hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"
-          type="submit"
-        >
-          {isLoading ? (
-            <RotatingLines
-              strokeColor="white"
-              strokeWidth="5"
-              animationDuration="0.75"
-              width="24"
-              visible={true}
-            />
-          ) : (
-            <span>{id === undefined ? "Cadastrar" : "Atualizar"}</span>
-          )}
-        </button>
-      </form>
-    </div>
+      </div>
+    </>
   );
 }
 

@@ -1,34 +1,33 @@
 /* eslint-disable prefer-const */
-import {
-  Globe,
-  GithubLogo,
-  LinkedinLogo,
-} from "@phosphor-icons/react";
+import { Globe, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 function Footer() {
-  let data = new Date().getFullYear();
-
   return (
     <>
-      <div className="flex justify-center bg-green-palette-300 text-eme ">
-        <div className="container flex flex-col items-center py-4">
-          <p className="text-xl font-bold">
-            Catharina Zagiacomo | Copyright {data}
-          </p>
-          <p className="text-lg">Acesse minhas redes sociais</p>
-          <div className="flex gap-2">
+      <footer className="footer footer-center bg-base-100 text-base-content rounded p-10">
+        <div className="grid grid-flow-col gap-4">
+          <span className="text-lg -my-8">Acesse minhas redes sociais</span>
+        </div>
+        <nav>
+          <div className="grid grid-flow-col gap-4">
             <a href="https://linkedin.com/in/czagiacomo/" target="_blank">
               <LinkedinLogo size={48} weight="regular" />
             </a>
             <a href="https://github.com/czagiacomo" target="_blank">
               <GithubLogo size={48} weight="regular" />
             </a>
-            <a href="https://czagiacomo.github.io/Portfolio/" target="_blank">
+            <a href="https://portfolio-beta-six-46.vercel.app" target="_blank">
               <Globe size={48} weight="regular" />
             </a>
           </div>
-        </div>
-      </div>
+        </nav>
+        <aside>
+          <p>
+            Copyright © {new Date().getFullYear()} - All right reserved by
+            Catharina Zagiacomo
+          </p>
+        </aside>
+      </footer>
     </>
   );
 }
