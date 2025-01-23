@@ -82,10 +82,7 @@ function DeletarTema() {
             <div className="card-body text-center">
               <h2 className="card-title justify-center mb-4">Tema</h2>
               <p>{tema.descricao}</p>
-              <div
-                className="card-actions grid grid-flow-col justify-stretch items-end pt-6
-            "
-              >
+              <div className="card-actions grid grid-flow-col justify-stretch items-end pt-6">
                 <button
                   className=" btn btn-ghost text-slate-100 bg-error hover:bg-red-700"
                   onClick={retornar}
