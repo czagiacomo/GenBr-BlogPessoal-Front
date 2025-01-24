@@ -90,18 +90,18 @@ function FormTema() {
 
   return (
     <>
-      <div className="bg-base-200 min-h-screen">
-        <div className="container flex flex-col items-center justify-center mx-auto ">
+      <div className="bg-base-100 min-h-screen">
+        <div className="container flex flex-col items-center justify-center mx-auto my-4">
           <h1 className="text-4xl text-center my-8 ">
             {id === undefined ? "Cadastrar Tema" : "Editar Tema"}
           </h1>
-
           <form className="w-1/2 flex flex-col gap-4 " onSubmit={gerarNovoTema}>
             <div className="flex flex-col gap-2">
               <label htmlFor="descricao">Descrição do Tema</label>
 
               <input
                 type="text"
+                name="descricao"
                 placeholder="Descreva aqui seu tema"
                 className="input input-bordered input-secondary"
                 value={tema.descricao}

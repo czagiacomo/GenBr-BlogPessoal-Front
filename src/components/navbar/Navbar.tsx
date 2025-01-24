@@ -19,17 +19,17 @@ function Navbar() {
   if (usuario.token !== "") {
     component = (
       <>
-        <div className="navbar bg-base-100">
+        <div className="navbar w-full shadow-md">
           <div className="flex-1 py-2 px-1">
             <Plant size={48} color="#3b8c3c" weight="duotone" alt="Home" />
-            <a href="/home" className="btn btn-ghost text-xl font-semibold">
+            <Link to="/home" className="btn btn-ghost text-xl font-semibold">
               Blog Pessoal
-            </a>
+            </Link>
           </div>
           <div className="flex-none">
             <ul className="menu menu-horizontal px-1 text-base font-medium">
               <li>
-                <Link to="/" className="hover:underline">
+                <Link to="/postagens" className="hover:underline">
                   Postagem
                 </Link>
               </li>

@@ -38,31 +38,23 @@ function ListaTemas() {
   }, [temas.length]);
 
   return (
-    <>
-      <div className="bg-base-200 min-h-screen">
-        {temas.length === 0 && (
-          <DNA
-            visible={true}
-            height="200"
-            width="200"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper mx-auto"
-          />
-        )}
-        <div className="container scale-95 mx-auto my-4 grid justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="flex justify-center w-full my-4">
-            <div className="container flex flex-col">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {temas.map((tema) => (
-                  <CardTemas key={tema.id} tema={tema} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="bg-base-100 min-h-screen">
+    {temas.length === 0 ? (
+      <DNA
+        visible={true}
+        height="200"
+        width="200"
+        ariaLabel="dna-loading"
+        wrapperClass="dna-wrapper mx-auto"
+      />
+    ) : (
+      <div className="container mx-auto my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {temas.map((tema) => (
+          <CardTemas key={tema.id} tema={tema} />
+        ))}
       </div>
-    </>
+    )}
+  </div>
   );
 }
 

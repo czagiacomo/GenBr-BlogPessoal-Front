@@ -9,7 +9,7 @@ function CardTemas({ tema }: CardTemasProps) {
   return (
     <>
       <div>
-        <div className="card bg-neutral text-neutral-content w-96 m-5">
+        <div className="card bg-neutral-content w-96 m-5 shadow-xl ">
           <div className="card-body text-center">
             <h2 className="card-title justify-center mb-4">Tema</h2>
             <p>{tema.descricao}</p>

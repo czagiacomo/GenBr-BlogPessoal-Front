@@ -4,7 +4,7 @@ import { Globe, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 function Footer() {
   return (
     <>
-      <footer className="footer footer-center bg-base-100 text-base-content rounded p-10">
+      <footer className="footer footer-center bg-base-100 text-base-content rounded p-10 ">
         <div className="grid grid-flow-col gap-4">
           <span className="text-lg -my-8">Acesse minhas redes sociais</span>
         </div>

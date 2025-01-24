@@ -72,13 +72,13 @@ function DeletarTema() {
 
   return (
     <>
-      <div className="bg-base-200 min-h-screen">
+      <div className="bg-base-100 min-h-screen my-4">
         <div className="container flex flex-col items-center justify-center mx-auto ">
           <h1 className="text-4xl text-center my-8 ">Deletar tema</h1>
           <p className="text-center font-semibold mb-4">
             Você tem certeza de que deseja apagar o tema a seguir?
           </p>
-          <div className="card bg-neutral text-neutral-content w-96 m-5">
+          <div className="card bg-neutral-content w-96 m-5 shadow-xl ">
             <div className="card-body text-center">
               <h2 className="card-title justify-center mb-4">Tema</h2>
               <p>{tema.descricao}</p>
