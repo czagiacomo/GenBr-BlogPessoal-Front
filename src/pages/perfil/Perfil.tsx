@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../contexts/AuthContext";
+import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens";
 
 function Perfil() {
   const navigate = useNavigate();
@@ -18,8 +19,8 @@ function Perfil() {
   return (
     <div className="container mx-auto m-4 rounded-2xl overflow-hidden">
       <img
-        className="w-full h-72 object-cover border-b-8 border-white"
-        src="https://i.imgur.com/ZZFAmzo.jpg"
+        className="w-full h-72 object-cover border-b-2 border-white"
+        src="https://images6.alphacoders.com/135/1350058.png"
         alt="Capa do Perfil"
       />
 
@@ -31,10 +32,13 @@ function Perfil() {
 
       <div
         className="relative mt-[-6rem] h-72 flex flex-col 
-                    bg-sky-500 text-white text-2xl items-center justify-center"
+                    bg-secondary text-white text-2xl items-center justify-center font-semibold"
       >
         <p>Nome: {usuario.nome} </p>
         <p>Email: {usuario.usuario}</p>
+      </div>
+      <div>
+      <ListaPostagens />
       </div>
     </div>
   );
