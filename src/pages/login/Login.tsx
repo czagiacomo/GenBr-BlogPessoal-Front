@@ -42,7 +42,7 @@ function Login() {
           className="flex justify-center items-center flex-col w-1/2 gap-4"
           onSubmit={login}
         >
-          <h2 className="text-slate-900 text-5xl font-sourgummy font-normal">Entrar</h2>
+          <h2 className="text-slate-900 text-5xl font-sourgummy font-medium">Entrar</h2>
           <div className="flex flex-col w-full">
             <label className="input input-bordered flex items-center gap-2">
               <svg
