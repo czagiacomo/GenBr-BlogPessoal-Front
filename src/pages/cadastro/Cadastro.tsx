@@ -67,7 +67,7 @@ function Cadastro() {
     <>
       <div
         className="grid grid-cols-1 lg:grid-cols-2 h-screen 
-            place-items-center font-bold"
+            place-items-center font-bold bg-base-200"
       >
         <div className="fundoCadastro hidden lg:block"></div>
         <form
