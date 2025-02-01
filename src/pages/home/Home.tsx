@@ -14,7 +14,7 @@ function Home() {
             <div className="flex flex-col gap-4 items-center justify-center py-4"></div>
           </div>
           <div className="flex flex-col items-center justify-center -py-12">
-            <h1 className="text-5xl font-bold">Seu Jardim de Ideias</h1>
+            <h1 className="text-6xl font-sourgummy font-normal">Seu Jardim de Ideias</h1>
             <p className="py-6 text-xl">
               Faça seus pensamentos florescerem!
             </p>

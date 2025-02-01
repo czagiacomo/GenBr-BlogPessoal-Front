@@ -74,7 +74,7 @@ function Cadastro() {
           className="flex justify-center items-center flex-col w-2/3 gap-3"
           onSubmit={cadastrarNovoUsuario}
         >
-          <h2 className="text-slate-900 text-5xl">Cadastrar</h2>
+          <h2 className="text-slate-900 text-5xl font-sourgummy font-normal">Cadastrar</h2>
           <div className="flex flex-col w-full my-1">
             <label className="input input-bordered flex items-center gap-2 input-md w-full">
               <svg
