@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Tema from "../../../models/Tema";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function FormTema() {
   const navigate = useNavigate();
@@ -60,12 +61,12 @@ function FormTema() {
         await atualizar(`/temas`, tema, setTema, {
           headers: { Authorization: token },
         });
-        alert("O Tema foi atualizado com sucesso!");
+        ToastAlerta("O tema foi atualizado com sucesso!", "sucesso")
       } catch (error: any) {
         if (error.toString().includes("403")) {
           handleLogout();
         } else {
-          alert("Erro ao atualizar o tema.");
+          ToastAlerta("Erro ao atualizar a postagem.", "erro")
         }
       }
     } else {
@@ -73,12 +74,12 @@ function FormTema() {
         await cadastrar(`/temas`, tema, setTema, {
           headers: { Authorization: token },
         });
-        alert("O Tema foi cadastrado com sucesso!");
+        ToastAlerta("Tema cadastrado com sucesso!", "sucesso")
       } catch (error: any) {
         if (error.toString().includes("403")) {
           handleLogout();
         } else {
-          alert("Erro ao cadastrar o tema.");
+          ToastAlerta("Erro ao cadastrar o tema.", "erro")
         }
       }
     }
