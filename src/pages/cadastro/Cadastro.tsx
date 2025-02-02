@@ -46,17 +46,25 @@ function Cadastro() {
   async function cadastrarNovoUsuario(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
+    const imagemPadrao = import.meta.env.VITE_FOTO_URL;
+
     if (confirmaSenha === usuario.senha && usuario.senha.length >= 8) {
       setIsLoading(true);
 
       try {
-        await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario);
-        ToastAlerta("Usuário cadastrado com sucesso!", "sucesso")
+        await cadastrarUsuario(
+          `/usuarios/cadastrar`,
+          { ...usuario, foto: usuario.foto || imagemPadrao },
+          setUsuario
+        );
+
+        ToastAlerta("Usuário cadastrado com sucesso!", "sucesso");
+        retornar();
       } catch (error) {
-        ToastAlerta("Erro ao cadastrar usuário.", "erro")
+        ToastAlerta("Erro ao cadastrar usuário.", "erro");
       }
     } else {
-      ToastAlerta("Não foi possível realizar o cadastro.", "info")
+      ToastAlerta("Não foi possível realizar o cadastro.", "info");
       setUsuario({ ...usuario, senha: "" });
       setConfirmaSenha("");
     }
@@ -75,7 +83,9 @@ function Cadastro() {
           className="flex justify-center items-center flex-col w-2/3 gap-3"
           onSubmit={cadastrarNovoUsuario}
         >
-          <h2 className="text-slate-900 text-5xl font-sourgummy font-normal">Cadastrar</h2>
+          <h2 className="text-slate-900 text-5xl font-sourgummy font-normal">
+            Cadastrar
+          </h2>
           <div className="flex flex-col w-full my-1">
             <label className="input input-bordered flex items-center gap-2 input-md w-full">
               <svg
@@ -123,6 +133,8 @@ function Cadastro() {
               />
             </label>
           </div>
+          <>
+            {/* 
           <div className="flex flex-col w-full my-1">
             <label className="input input-bordered flex items-center gap-2 input-md w-full">
               <svg
@@ -150,8 +162,8 @@ function Cadastro() {
                 }
               />
             </label>
-          </div>
-          <></>
+          </div>*/}
+          </>
           <div className="flex flex-col w-full my-1">
             <label className="input input-bordered flex items-center gap-2 input-md w-full">
               <svg
