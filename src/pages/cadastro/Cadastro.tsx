@@ -182,7 +182,7 @@ function Cadastro() {
                 type="password"
                 id="senha"
                 name="senha"
-                placeholder="Digite sua senha"
+                placeholder="Digite sua senha ( mínimo de 8 caracteres )"
                 className="grow"
                 value={usuario.senha}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
