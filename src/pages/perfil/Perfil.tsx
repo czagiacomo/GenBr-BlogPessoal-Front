@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../contexts/AuthContext";
-import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens";
+import ListaPostagensUsuario from "../../components/postagens/listapostagens/ListaPostagensUsuario";
 
 function Perfil() {
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ function Perfil() {
         <p>Email: {usuario.usuario}</p>
       </div>
       <div>
-        <ListaPostagens />
+        <ListaPostagensUsuario />
       </div>
     </div>
   );
